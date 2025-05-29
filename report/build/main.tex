@@ -33,7 +33,7 @@
 
 % --- Bibliography with BibLaTeX ---
 \usepackage{biblatex}
-\addbibresource{bib.bib}
+\addbibresource{report/build/bib.bib}
 \usepackage{appendix}
 
 
@@ -52,15 +52,15 @@
 This report documents the design, implementation, and evolution of our ITU-MiniTwit system throughout the DevOps course. Working as a team, we began with a basic Python-based "Twitter clone" and migrated it to a Go-based architecture, applying DevOps principles at every stage. Over the semester, we incrementally integrated tools and practices such as containerization, infrastructure as code, continuous integration and deployment, monitoring, logging, and scaling strategies. This report outlines the technical decisions we made, the tools and workflows we adopted, and the lessons learned while building a reliable, testable, and maintainable system.
 
 \section{System}
-\input{Sections/System}
+\input{report/build/Sections/System.tex}
 
 \clearpage
 \section{Process}
-\input{Sections/Process}
+\input{report/build/Sections/Process.tex}
 
 \clearpage
 \section{Reflections}
-\input{Sections/LessonsLearned}
+\input{report/build/Sections/LessonsLearned.tex}
 %bibliography 
 
 \begin{appendices}
