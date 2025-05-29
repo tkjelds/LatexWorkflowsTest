@@ -1,6 +1,15 @@
-name: Build LaTeX document
-on: [push]
+name: Build LaTeX PDF
 
+on:
+  push:
+    paths:
+      - 'report/build/**'
+      - '.github/workflows/latex.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write  # 👈 This is required for committing changes back to the repo
+  
 jobs:
   build-pdf:
     runs-on: ubuntu-latest
