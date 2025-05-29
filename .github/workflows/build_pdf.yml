@@ -38,7 +38,7 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add report/output/main.pdf
+          git add report/output/report.pdf
           git commit -m "Update generated PDF [skip ci]" || echo "No changes to commit"
           git push
         env:
