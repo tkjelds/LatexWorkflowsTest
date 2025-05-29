@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # 👈 This is required for committing changes back to the repo
+  contents: write
   
 jobs:
   build-pdf:
