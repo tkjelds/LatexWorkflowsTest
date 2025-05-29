@@ -24,3 +24,14 @@ jobs:
         with:
           name: report-pdf
           path: report/output/report.pdf
+          
+      - name: Commit and push PDF
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add report/output/main.pdf
+          git commit -m "Update generated PDF [skip ci]" || echo "No changes to commit"
+          git push
+        env:
+          # Use GitHub token to allow push back to the repo
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
