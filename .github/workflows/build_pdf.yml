@@ -22,7 +22,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: report.tex
-          working_directory: report
+          working_directory: report/
           latexmk_use_lualatex: true
           extra_fonts: |
             /usr/share/fonts
