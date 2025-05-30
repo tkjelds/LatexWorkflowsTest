@@ -26,7 +26,7 @@ jobs:
           latexmk_use_lualatex: true
           extra_fonts: |
             /usr/share/fonts
-          args: -pdf -interaction=nonstopmode -file-line-error -output-directory=../build
+          args: -pdf -interaction=nonstopmode -file-line-error -output-directory=build
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
