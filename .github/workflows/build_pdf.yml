@@ -22,7 +22,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: report.tex
-          working_directory: report/
+          working_directory: report
           latexmk_use_lualatex: true
           extra_fonts: |
             /usr/share/fonts
@@ -42,5 +42,4 @@ jobs:
           git commit -m "Update generated PDF [skip ci]" || echo "No changes to commit"
           git push
         env:
-          # Use GitHub token to allow push back to the repo
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
